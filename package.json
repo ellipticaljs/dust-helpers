@@ -1,7 +1,7 @@
 {
   "name": "elliptical-dust-helpers",
   "description": "Dust Helpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "S. Francis",
   "license": "MIT",
   "repository": {
@@ -11,8 +11,7 @@
   "dependencies": {
     "dustjs": "git+https://github.com/tachyon1337/dustjs.git",
     "dustjs-helpers": "^1.7.3",
-    "elliptical-utils": "git+https://github.com/tachyon1337/elliptical-utils.git",
-    "moment": "^2.10.6"
+    "elliptical-utils": "git+https://github.com/tachyon1337/elliptical-utils.git"
   },
   "devDependencies": {
     "gulp": "^3.8.7",
