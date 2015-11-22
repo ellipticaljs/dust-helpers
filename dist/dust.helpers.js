@@ -480,7 +480,7 @@ return dust;
         // Browser globals (root is window)
         root.returnExports = factory(root.dust,root.dust.helpers,root.elliptical.utils);
     }
-}(this, function (dust,helpers,moment,utils) {
+}(this, function (dust,helpers,utils) {
 
     var string=utils.string;
     var random=utils.random;
