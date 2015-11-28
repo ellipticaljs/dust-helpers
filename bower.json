@@ -1,7 +1,7 @@
 {
   "name": "elliptical-dust-helpers",
   "description": "Dust Helpers",
-  "version":"1.0.5",
+  "version":"1.0.6",
   "main": "dist/dust.helpers.js",
   "authors": [
     "S. Francis"
@@ -11,14 +11,31 @@
     "dust",
     "helpers"
   ],
-  "homepage": "https://github.com/tachyon1337/elliptical-dust-helpers",
+  "homepage": "https://github.com/ellipticaljs/dust-helpers",
   "moduleType": [],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    ".gitignore",
+    ".npmignore",
+    "gulpfile.js",
+    "lib",
+    "docs",
+    "index.js",
+    "umd.js",
+    "package.json",
+    "demo",
+    "index.html",
+    "build.json",
+    "bundle.json",
+    ".nvmrc",
+    ".eslintrc",
+    "bin",
+    "CHANGELOG.md",
+    "demos"
   ],
   "dependencies": {
     "elliptical-dustjs": "~2.7.3",
