@@ -459,7 +459,6 @@ return dust;
 
 }));
 
-
 /*
  * =============================================================
  * dust helpers
@@ -569,8 +568,8 @@ return dust;
         }
         return chunk.write(selected);
     };
-    
-     dust.helpers.selectedPage=function(chunk,context,bodies,params){
+
+    dust.helpers.selectedPage=function(chunk,context,bodies,params){
         var index=context.stack.index + 1;
         var page=dust.helpers.tap(params.page, chunk, context);
         page=parseInt(page);
@@ -686,6 +685,18 @@ return dust;
         return chunk.write(id);
     };
 
+    dust.helpers.properCaseToSentence=function(chunk, context, bodies, params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        value=string.camelCaseToSpace(value)
+        return chunk.write(value);
+    };
+
+    dust.helpers.camelCaseToSentence=function(chunk, context, bodies, params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        value=string.camelCaseToSpace(value)
+        value=value.charAt(0).toUpperCase() + value.slice(1);
+        return chunk.write(value);
+    };
 
     dust.helpers.inline={};
 
@@ -721,4 +732,3 @@ return dust;
 
     return dust;
 }));
-
