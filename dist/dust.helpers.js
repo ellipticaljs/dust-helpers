@@ -687,13 +687,14 @@ return dust;
 
     dust.helpers.properCaseToSentence=function(chunk, context, bodies, params){
         var value = dust.helpers.tap(params.value, chunk, context);
-        value=string.camelCaseToSpace(value)
+        value=string.camelCaseToSpace(value);
+        value=value.charAt(0).toUpperCase() + value.slice(1);
         return chunk.write(value);
     };
 
     dust.helpers.camelCaseToSentence=function(chunk, context, bodies, params){
         var value = dust.helpers.tap(params.value, chunk, context);
-        value=string.camelCaseToSpace(value)
+        value=string.camelCaseToSpace(value);
         value=value.charAt(0).toUpperCase() + value.slice(1);
         return chunk.write(value);
     };
