@@ -587,6 +587,15 @@ return dust;
         return chunk.write(out);
     };
 
+    dust.helpers.falsy=function(chunk,context,bodies,params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        var altValue=dust.helpers.tap(params.altValue, chunk, context);
+        var out=value;
+        if(!value) out=altValue;
+        else if(value==="0" || value==="false") out=altValue;
+        return chunk.write(out)
+    };
+
     dust.helpers.hide=function(chunk,context,bodies,params){
         var value = dust.helpers.tap(params.value, chunk, context);
         var hide='';
