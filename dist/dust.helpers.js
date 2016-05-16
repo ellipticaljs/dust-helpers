@@ -719,5 +719,15 @@ return dust;
         return chunk.write(out);
     };
 
+    dust.helpers.href=function(chunk, context, bodies, params){
+        var attr='';
+        var href = dust.helpers.tap(params.value, chunk, context);
+        if(href!==undefined && href!==''){
+            attr='href="' + href + '"';
+        }
+
+        return chunk.write(attr);
+    };
+
     return dust;
 }));
