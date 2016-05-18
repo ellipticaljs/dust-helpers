@@ -614,6 +614,16 @@ return dust;
         return chunk.write(disable);
     };
 
+    dust.helpers.toLower=function(chunk,context,bodies,params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        return chunk.write(value.toLowerCase());
+    };
+
+    dust.helpers.toUpper=function(chunk,context,bodies,params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        return chunk.write(value.toUpperCase());
+    };
+
     dust.helpers.readonly=function(chunk,context,bodies,params){
         var value = dust.helpers.tap(params.value, chunk, context);
         var readOnly='';
