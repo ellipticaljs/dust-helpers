@@ -554,6 +554,20 @@ return dust;
         return chunk.write(checked);
     };
 
+    dust.helpers.radioChecked=function(chunk,context,bodies,params){
+        var value = dust.helpers.tap(params.value, chunk, context);
+        var key= dust.helpers.tap(params.key, chunk, context);
+        var checked='';
+        try{
+            if(value && value.toLowerCase()===key.toLowerCase()){
+                checked='data-checked="true"';
+            }
+        }catch(ex){
+
+        }
+        return chunk.write(checked);
+    };
+
 
     dust.helpers.selected=function(chunk,context,bodies,params){
         var value = dust.helpers.tap(params.value, chunk, context);
