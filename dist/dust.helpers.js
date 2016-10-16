@@ -595,8 +595,8 @@ return dust;
         var value = dust.helpers.tap(params.value, chunk, context);
         var true_= dust.helpers.tap(params.true, chunk, context);
         var false_= dust.helpers.tap(params.false, chunk, context);
-
-        var out=(value) ? true_ : false_;
+        value=value.toString();
+        var out=(value==='true') ? true_ : false_;
 
         return chunk.write(out);
     };
