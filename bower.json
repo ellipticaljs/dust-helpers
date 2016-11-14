@@ -1,7 +1,7 @@
 {
   "name": "elliptical-dust-helpers",
   "description": "Dust Helpers",
-  "version":"1.0.17",
+  "version":"1.0.18",
   "main": "dist/dust.helpers.js",
   "authors": [
     "S. Francis"
